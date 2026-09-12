@@ -1,0 +1,38 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Large model checkpoints (>100MB cannot be pushed directly to GitHub without Git LFS)
+# Checkpoints should be hosted on Hugging Face or Google Drive and downloaded via scripts
+checkpoints/*.pth
+*.pth
+*.pt
+*.bin
+
+# Allow tracking the LoRA adapter safetensors if desired (<100MB)
+!checkpoints/lora_epoch_19/adapter_model.safetensors
+!checkpoints/lora_epoch_19/adapter_config.json
+!checkpoints/lora_epoch_19/README.md
+
+# Generated outputs and logs
+*.xlsx
+*.csv
+*.log
+runs/
+logs/
+umap_plots/
+visualize/
+
+# Dataset folders
+data/
+datasets/
+
+# IDE and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
