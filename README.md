@@ -74,12 +74,12 @@ import os
 import torch
 from PIL import Image
 from torchvision import transforms
-from model import SCOLD_LFM_ImageMoE_LoRA
+from model import SOLAR
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 1. Initialize model
-model = SCOLD_LFM_ImageMoE_LoRA(
+model = SOLAR(
     scold_ckpt="scold/scold.pth",
     num_experts=4,
     top_k=2,
@@ -120,12 +120,14 @@ with torch.no_grad():
 Please cite this paper if this code is useful for you!
 
 ```bibtex
-@article{quoc2026solar,
-  title={A Multi-Modal Generative Model for Tomato Disease Leaves Understanding},
-  author={Khang Nguyen Quoc, Minh-Phuoc Tran, Gia-Han Truong, Luyl-Da Quach},
-  journal={arXiv preprint arXiv:2609.19555},
-  year={2026},
-  url={https://arxiv.org/abs/2609.19555}
+@misc{quoc2026multimodalgenerativemodeltomato,
+      title={A Multi-Modal Generative Model for Tomato Disease Leaves Understanding}, 
+      author={Khang Nguyen Quoc and Minh-Phuoc Tran and Gia-Han Truong and Luyl-Da Quach},
+      year={2026},
+      eprint={2609.19555},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2609.19555}, 
 }
 ```
 

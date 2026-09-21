@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 from dataset import CSVDataset
 from metrics import F1Metric
-from model import SCOLD_LFM_ImageMoE_LoRA
+from model import SOLAR
 
 # Hallucination tokens to filter out from raw LLM generation
 GARBAGE_TOKENS = {"fjärils", "butterfly", "butterflies"}
@@ -91,7 +91,7 @@ def main():
 
     # ── Model Initialization ──────────────────────────────────────────────────
     print("🔧 Initializing model architecture...")
-    model = SCOLD_LFM_ImageMoE_LoRA(
+    model = SOLAR(
         scold_ckpt=args.scold_ckpt,
         num_experts=args.num_experts,
         top_k=args.top_k,
