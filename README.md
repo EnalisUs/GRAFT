@@ -122,7 +122,7 @@ Please cite this paper if this code is useful for you!
 ```bibtex
 @article{quoc2026solar,
   title={A Multi-Modal Generative Model for Tomato Disease Leaves Understanding},
-  author={Quoc, Khang Nguyen and Tran, Minh-Phuoc and Truong, Gia-Han and Quach, Luyl-Da},
+  author={Khang Nguyen Quoc, Minh-Phuoc Tran, Gia-Han Truong, Luyl-Da Quach},
   journal={arXiv preprint arXiv:2609.19555},
   year={2026},
   url={https://arxiv.org/abs/2609.19555}
