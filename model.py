@@ -246,8 +246,3 @@ class GRAFT(nn.Module):
         answer_text = self.tokenizer.decode(new_ids, skip_special_tokens=True).strip()
 
         return answer_text
-
-
-# Backward compatibility
-SCOLD_LFM_ImageMoE_LoRA = GRAFT
-SOLAR = GRAFT
