@@ -8,7 +8,7 @@ from moe import ImageMoE
 from vision_encoder import SCOLDVisionEncoder
 
 
-class SOLAR(nn.Module):
+class GRAFT(nn.Module):
     """
     Multimodal Visual Question Answering (VQA) Model with Image MoE and Residual Fusion.
 
@@ -93,7 +93,7 @@ class SOLAR(nn.Module):
         self.aux_loss_coef = aux_loss_coef
         self.diversity_loss_coef = diversity_loss_coef
 
-        print(f"✅ SOLAR (Residual Fusion): {num_experts} experts, top_k={top_k}")
+        print(f"✅ GRAFT (Residual Fusion): {num_experts} experts, top_k={top_k}")
 
     # ──────────────────────────────────────────────────────────────────────────
     def get_text_embedding(self, questions: list, device: torch.device) -> torch.Tensor:
@@ -249,4 +249,5 @@ class SOLAR(nn.Module):
 
 
 # Backward compatibility
-SCOLD_LFM_ImageMoE_LoRA = SOLAR
+SCOLD_LFM_ImageMoE_LoRA = GRAFT
+SOLAR = GRAFT

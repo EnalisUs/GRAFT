@@ -5,7 +5,7 @@ import torch
 from torch.utils.data import DataLoader
 
 from dataset import CSVDataset, collate_fn
-from model import SOLAR
+from model import GRAFT
 
 
 def parse_args():
@@ -65,7 +65,7 @@ def main():
     )
 
     # ── Model Initialization ──────────────────────────────────────────────────
-    model = SOLAR(
+    model = GRAFT(
         scold_ckpt=args.scold_ckpt,
         num_experts=args.num_experts,
         top_k=args.top_k,

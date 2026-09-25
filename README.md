@@ -17,13 +17,13 @@ tags:
 library_name: transformers
 ---
 
-# 🍅 SOLAR: A Multi-Modal Generative Model for Tomato Disease Leaves Understanding
+# 🍅 GRAFT: a GeneRAtive multi-modal Foundation model for Tomato pathology
 
 [![arXiv](https://img.shields.io/badge/arXiv-2609.19555-b31b1b.svg)](https://arxiv.org/abs/2609.19555)
 [![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-enalis%2FSOLAR-blue)](https://huggingface.co/enalis/SOLAR)
 [![Hugging Face SCOLD](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-enalis%2Fscold-green)](https://huggingface.co/enalis/scold)
 
-**SOLAR** is a multimodal generative model that formulates tomato leaf disease diagnosis as a **Visual Question Answering (VQA)** task. By integrating the domain-specific **SCOLD vision foundation model** with a **LiquidAI LFM2.5 language backbone** via a task-aware **Image Mixture-of-Experts (ImageMoE)** and **Residual Fusion**, SOLAR enables comprehensive multimodal reasoning across diverse diagnostic tasks, including symptom recognition, disease identification, severity assessment, and treatment recommendations.
+**GRAFT** is a multimodal generative model that formulates tomato leaf disease diagnosis as a **Visual Question Answering (VQA)** task. By integrating the domain-specific **SCOLD vision foundation model** with a **LiquidAI LFM2.5 language backbone** via a task-aware **Image Mixture-of-Experts (ImageMoE)** and **Residual Fusion**, GRAFT enables comprehensive multimodal reasoning across diverse diagnostic tasks, including symptom recognition, disease identification, severity assessment, and treatment recommendations.
 
 ---
 
@@ -74,12 +74,12 @@ import os
 import torch
 from PIL import Image
 from torchvision import transforms
-from model import SOLAR
+from model import GRAFT
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 1. Initialize model
-model = SOLAR(
+model = GRAFT(
     scold_ckpt="scold/scold.pth",
     num_experts=4,
     top_k=2,
