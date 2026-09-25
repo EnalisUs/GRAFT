@@ -20,7 +20,7 @@ library_name: transformers
 # 🍅 GRAFT: a GeneRAtive multi-modal Foundation model for Tomato pathology
 
 [![arXiv](https://img.shields.io/badge/arXiv-2609.19555-b31b1b.svg)](https://arxiv.org/abs/2609.19555)
-[![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-enalis%2FSOLAR-blue)](https://huggingface.co/enalis/SOLAR)
+[![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-enalis%2FGRAFT-blue)](https://huggingface.co/enalis/GRAFT)
 [![Hugging Face SCOLD](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-enalis%2Fscold-green)](https://huggingface.co/enalis/scold)
 
 **GRAFT** is a multimodal generative model that formulates tomato leaf disease diagnosis as a **Visual Question Answering (VQA)** task. By integrating the domain-specific **SCOLD vision foundation model** with a **LiquidAI LFM2.5 language backbone** via a task-aware **Image Mixture-of-Experts (ImageMoE)** and **Residual Fusion**, GRAFT enables comprehensive multimodal reasoning across diverse diagnostic tasks, including symptom recognition, disease identification, severity assessment, and treatment recommendations.
@@ -39,8 +39,8 @@ library_name: transformers
 First clone our repository:
 
 ```bash
-git clone https://github.com/EnalisUs/SOLAR.git
-cd SOLAR
+git clone https://github.com/EnalisUs/GRAFT.git
+cd GRAFT
 pip install -r requirements.txt
 ```
 
@@ -56,8 +56,8 @@ Download our pretrained model weights and LoRA adapter into `checkpoints/`:
 mkdir -p checkpoints
 python -c "
 from huggingface_hub import hf_hub_download, snapshot_download
-hf_hub_download(repo_id='enalis/SOLAR', filename='model_epoch_19.pth', local_dir='checkpoints')
-snapshot_download(repo_id='enalis/SOLAR', allow_patterns='lora_epoch_19/*', local_dir='checkpoints')
+hf_hub_download(repo_id='enalis/GRAFT', filename='model_epoch_19.pth', local_dir='checkpoints')
+snapshot_download(repo_id='enalis/GRAFT', allow_patterns='lora_epoch_19/*', local_dir='checkpoints')
 "
 ```
 
