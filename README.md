@@ -107,7 +107,7 @@ transform = transforms.Compose([
 ])
 # Single image tensor [3, 224, 224]
 image = transform(Image.open("path_to_leaf.jpg").convert("RGB")).to(device)
-question = "What disease is affecting this tomato leaf?"
+question = "Does the images show diseased leaves?"
 
 # 4. Generate diagnosis
 with torch.no_grad():
